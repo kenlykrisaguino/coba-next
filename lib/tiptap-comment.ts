@@ -134,6 +134,6 @@ export function extractCommentRangesFromJSON(doc: any): CommentRange[] {
 export function findCommentRangeAtPosById(editor: any, pos: number, id: string): Range | null {
   const type = editor.schema.marks.comment
   const $pos = editor.state.doc.resolve(pos)
-  return getMarkRange($pos, type, { id })
+  const r = getMarkRange($pos, type, { id })
+  return (r as Range) || null
 }
-

@@ -12,7 +12,7 @@
 }
 
 .editor-content {
-  @apply border rounded-md p-4 bg-white shadow-sm min-h-[200px];
+  @apply border rounded-md p-4 bg-white shadow-sm min-h-[200px] max-h-[75vh] overflow-auto;
 }
 
 /* Comment mark style */
@@ -26,4 +26,3 @@
 .comment-popover {
   @apply absolute bg-white border rounded-md shadow-lg p-3 text-sm w-64;
 }
-
